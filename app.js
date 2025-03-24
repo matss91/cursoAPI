@@ -7,7 +7,7 @@ const cors = require('cors');
 
 
 const app = express();
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['http://localhost:3000'];
 
 const options= {
   origin: allowedOrigins
@@ -35,8 +35,8 @@ app.use(function(err , req, res , next ) {
       });
   });
 
-/* app.listen(process.env.PORT, ()=> {
-console.log(`Server running in https://localhost:${process.env.PORT}`);
-}); */
+ app.listen(8000, ()=> {
+console.log(`Server running in https://localhost:8000`);
+});
 
 module.exports=app
